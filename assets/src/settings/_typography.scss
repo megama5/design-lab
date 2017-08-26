@@ -1,0 +1,14 @@
+// global fonts vativables
+$global-font-family: 'Lato', sans-serif;
+
+// Importet fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+// global css fonts rooles
+body{
+	font-family: $global-font-family;
+}
+
+h1,p{
+	margin-top: 0;
+}

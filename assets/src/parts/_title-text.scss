@@ -1,0 +1,70 @@
+$font-size: 34;
+$line-height-ratio: 6;
+
+.title-text{
+	padding: rem(146) 0 rem(160) 0;
+	&--bg-img{
+		@include bg-img('../img/services-jpg.jpg');
+	}
+	&__info-wrap{
+		@extend .flex-col;
+		border-bottom: 2px solid $black-01;
+		align-items: center;
+		padding: 0 0 rem(29) 0;
+		position: relative;
+		color: $black-01;
+		&:before, &:after{
+			content: '';
+			display: block;
+			position: absolute;
+			height: calc( 100% - #{rem( ($font-size + $line-height-ratio) / 2) } );
+			width: 240px;
+			bottom: 0;
+			border-top: 2px solid $black-01;
+		}
+		&:before{
+			left: 0;
+			border-left: 2px solid $black-01;
+		}
+		&:after{
+			right: 0;
+			border-right: 2px solid $black-01;
+		}
+
+
+		&--bg{
+			color: $white;
+			border-color: $white; 
+			&:before, &:after{
+				border-color: $white;
+			}
+			&:before{
+				border-color: $white;
+			}
+			&:after{
+				border-color: $white;
+			}
+		}
+	}
+	&__title{
+		width: rem(418);
+		// position: absolute;
+		top: rem( -($font-size + $line-height-ratio) / 2);
+		margin-top: 0;
+		margin-bottom: rem(65);
+		text-align: center;
+		font-size: rem($font-size);
+		line-height: rem( $font-size + $line-height-ratio);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: rem(8);
+		background-color: $white;
+		&--bg{
+			background-color: transparent;	
+
+		}
+	}
+	&__text{
+		width: 62%;
+	}
+}
